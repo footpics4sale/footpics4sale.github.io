@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>OSINT - I am an Investigator</title>
+  <title>I am an Investigator - VishwaCTF 2023 Writeup by footpics4sale</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -19,30 +19,43 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://footpics4sale.github.io/css/lightfairy-pink2.css" />
+  <link rel="stylesheet" href="/css/lightfairy-pink2.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<h1 data-heading="VishwaCTF 2023 - I am an Investigator"
-id="vishwactf-2023---i-am-an-investigator">VishwaCTF 2023 - I am an
-Investigator</h1>
-<p><strong>Category:</strong> OSINT<br />
-<strong>Difficulty:</strong> Medium<br />
-<strong>Writeup by:</strong> footpics4sale of <a
-href="https://onlyfeet.tech" class="external-link"
-aria-label-position="top" aria-label="https://onlyfeet.tech"
-rel="noopener" target="_blank">OnlyFeet</a></p>
+<div class="wrapper">
+<p><h1 data-heading="VishwaCTF 2023 Writeup"
+id="vishwactf-2023-writeup">VishwaCTF 2023 Writeup</h1>
+<strong>Writeup by:</strong> <a
+  href="https://github.com/footpics4sale" class="external-link"
+  aria-label-position="top" aria-label="https://github.com/footpics4sale"
+  rel="noopener" target="_blank">footpics4sale</a> of <a
+  href="https://onlyfeet.tech" class="external-link"
+  aria-label-position="top" aria-label="https://onlyfeet.tech"
+  rel="noopener" target="_blank">OnlyFeet</a><br />
+<strong>CTF:</strong> <a
+  href="https://vishwactf.com" class="external-link"
+  aria-label-position="top" aria-label="https://vishwactf.com"
+  rel="noopener" target="_blank">https://vishwactf.com</a><br />
+</p>
+
+<p><h2 data-heading="I am an Investigator" id="i-am-an-investigator">I am an Investigator</h2>
+<strong>Category:</strong> OSINT<br />
+<strong>Difficulty:</strong> Medium<br /></p>
 <p><strong>DESCRIPTION</strong><br />
 Our CrimeBranch is investigating the following crime. We cannot afford
 to visit the crime scene IRL, please help us.</p>
-<p><strong>FLAG FORMAT:</strong> <code>VishwaCTF{}</code></p>
-<p><strong>FILE:</strong> <a href="attachments/RealFirst.png" aria-label-position="top"
+<p><strong>FLAG FORMAT</strong><br />
+<code>VishwaCTF{}</code></p>
+<p><strong>FILE</strong><br />
+<a href="attachments/RealFirst.png" aria-label-position="top"
 aria-label="attachments/RealFirst.png"
 rel="noopener" target="_blank">RealFirst.png</a></p>
-<h2 data-heading="Writeup" id="writeup">Writeup</h2>
-<p>The provided file gives this error:<br />
+<br />
+<p><h2 data-heading="Writeup" id="writeup">Writeup</h2>
+The provided file gives this error:<br />
 <img src="attachments/investigator-1.png" class="internal-embed"
 data-touched="true" alt="investigator-1.png" /></p>
 <p>Opening the file in a hex editor shows that the first four bytes
@@ -66,8 +79,8 @@ target="_blank">https://pixelcalculator.com</a> to convert pixels to
 cm:<br />
 <img src="attachments/investigator-4.png" class="internal-embed"
 data-touched="true" alt="investigator-4.png" /><br />
-Latitude: 52.37<br />
-Longitude: 5.2</p>
+<ul><li>Latitude: 52.37</li>
+<li>Longitude: 5.2</li></ul></p>
 <p>Entered these coordinates in Google Maps and we're placed in a
 parking lot in Almere, Netherlands:<br />
 <img src="attachments/investigator-5.png" class="internal-embed"
@@ -113,13 +126,13 @@ data-touched="true" alt="investigator-12.png" /></p>
 target="_blank">https://ezgif.com</a> there are a bunch of different
 tools that can be used on gifs. I used the "Video to GIF" tool and the
 "Split" tool to view the entire message of the video.<br />
-<img src="attachments/investigator-ezgif.gif" class="internal-embed"
+<img src="attachments/investigator-ezgif.gif" class="center"
 data-touched="true" alt="investigator-ezgif.gif" /><br />
 <img src="attachments/investigator-13.png" class="internal-embed"
 data-touched="true" alt="investigator-13.png" /><br />
 <img src="attachments/investigator-14.png" class="internal-embed"
 data-touched="true" alt="investigator-14.png" /><br />
-The following information is provided:</p>
+The following information is provided:
 <ul>
 <li>P9W8+2R Wittmann, Arizona, USA</li>
 <li><code>01100111 01101001 01100001 01101110 01110100 00100000 01110100 01110010 01101001 01100001 01101110 01100111 01101100 01100101</code>
@@ -133,7 +146,7 @@ basically saying:
 review site to see what people have said about hte site, and you can see
 my summary acknowledgement uploaded."</li>
 </ul></li>
-</ul>
+</ul></p>
 <p><img src="attachments/investigator-15.png" class="internal-embed"
 data-touched="true" alt="investigator-15.png" /><br />
 There isn't anything besides the photo displayed at "P9W8+2R Wittmann,
@@ -157,5 +170,6 @@ data-touched="true" alt="investigator-18.png" /><br />
 data-touched="true" alt="Flag.png" /></p>
   <p><strong>Flag:</strong>
 <code>VishwaCTF{n0t_4_murd3r_just_4_m1sund3rst4nd1ng}</code></p>
+</div>
 </body>
 </html>
