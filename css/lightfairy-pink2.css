@@ -91,7 +91,7 @@ video {
 body,
 html {
     padding: 0;
-    margin: 5; /*Vale*/
+    margin: 5px; /*Vale*/
     overflow-x: hidden;
     background-color: #fce4ec
 }
@@ -219,27 +219,33 @@ section[container] {
 }
 
 h1 {
-    font-size: 2.35em
+    font-size: 2.35em;
+    margin-bottom: 0px
 }
 
 h2 {
-    font-size: 2em
+    font-size: 2em;
+    margin-bottom: 0px
 }
 
 h3 {
-    font-size: 1.75em
+    font-size: 1.75em;
+    margin-bottom: 0px
 }
 
 h4 {
-    font-size: 1.5em
+    font-size: 1.5em;
+    margin-bottom: 0px
 }
 
 h5 {
-    font-size: 1.25em
+    font-size: 1.25em;
+    margin-bottom: 0px
 }
 
 h6 {
-    font-size: 1em
+    font-size: 1em;
+    margin-bottom: 0px
 }
 
 a {
@@ -321,7 +327,8 @@ div[overflow] ::-webkit-scrollbar {
 }
 
 img {
-    max-width: 50%;
+    max-width: 75%;
+    vertical-align: middle;
     border-radius: 5px
 }
 
@@ -433,6 +440,26 @@ button[secondary] {
 button[secondary]:active {
     background-color: #ff80ab;
     color: initial
+}
+
+.wrapper {
+    max-width: -webkit-calc(800px - (30px * 2));
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+
+strong {
+  font-weight: bold;
 }
 
 body>footer {
