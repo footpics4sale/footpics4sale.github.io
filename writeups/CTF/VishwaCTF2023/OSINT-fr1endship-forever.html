@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Fr1endship Forever - VishwaCTF 2023 Writeup by footpics4sale</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/css/lightfairy-pink2.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+<p><h1 data-heading="VishwaCTF 2023 Writeup"
+id="vishwactf-2023-writeup">VishwaCTF 2023 Writeup</h1>
+<strong>Writeup by:</strong> <a
+href="https://github.com/footpics4sale" class="external-link"
+aria-label-position="top" aria-label="https://github.com/footpics4sale"
+rel="noopener" target="_blank">footpics4sale</a> of <a
+href="https://onlyfeet.tech" class="external-link"
+aria-label-position="top" aria-label="https://onlyfeet.tech"
+rel="noopener" target="_blank">OnlyFeet</a><br />
+<strong>CTF:</strong> <a href="https://vishwactf.com"
+class="external-link" rel="noopener"
+target="_blank">https://vishwactf.com</a>
+</p>
+
+<p><h2 data-heading="Fr1endship Forever" id="fr1endship-forever">Fr1endship
+Forever</h2>
+<strong>Category:</strong> OSINT<br />
+<strong>Difficulty:</strong> Medium</p>
+<p><strong>DESCRIPTION</strong>
+<pre><code>This is going to be a double hunt...
+
+My childhood Fr1end James has posted something about the project he made on his socials (just to flaunt). Today is our submission day and my Fr1end James is absent. Yesterday when we met him, he told me, &quot;Mark can you submit my project also with yours, as I will be going out of the city tomorrow morning.&quot; He forgot to tell me anything about his project. He is not even picking up my phone.
+
+Help me find him and of course his project.</code></pre></p>
+<p><strong>FLAG FORMAT</strong><br />
+<code>VishwaCTF{}</code></p>
+<br />
+
+<p><h2 data-heading="Writeup" id="writeup">Writeup</h2>
+Searched <code>fr1end james</code> on Twitter and found the account
+<a href="https://twitter.com/Fr1endJames" class="external-link"
+aria-label-position="top" aria-label="https://twitter.com/Fr1endJames"
+rel="noopener" target="_blank">@Fr1endJames</a>:<br />
+<img src="attachments/ff-1.png"
+class="internal-embed" data-touched="true" alt="ff-1.png" /></p>
+<p>The latest tweet mentions his project
+"Endsem_Last_Minute-Project":<br />
+<img src="attachments/ff-2.png"
+class="internal-embed" data-touched="true" alt="ff-2.png" /></p>
+<p>Searched <code>Endsem_Last_Minute-Project</code> on GitHub and found
+a repository with the same name under the username "Your-James":<br />
+<a href="https://github.com/Your-James/Endsem_Last_Minute-Project"
+class="external-link" rel="noopener"
+target="_blank">https://github.com/Your-James/Endsem_Last_Minute-Project</a><br />
+<img src="attachments/ff-3.png"
+class="internal-embed" data-touched="true" alt="ff-3.png" /><br />
+<img src="attachments/ff-4.png"
+class="internal-embed" data-touched="true" alt="ff-4.png" /></p>
+<p>I mean... "Flag File" would've been too easy, right? 🥹<br />
+<img src="attachments/ff-5.png"
+class="internal-embed" data-touched="true" alt="ff-5.png" /></p>
+<p>Looked through the commit history and found the flag in commit <a
+href="https://github.com/Your-James/Endsem_Last_Minute-Project/commit/fe599443374ecc8026da74872cc22ac62e1c55e6"
+class="external-link" aria-label-position="top"
+aria-label="https://github.com/Your-James/Endsem_Last_Minute-Project/commit/fe599443374ecc8026da74872cc22ac62e1c55e6"
+rel="noopener" target="_blank">fe59944</a> "Update Suggester.cpp":<br />
+<img src="attachments/ff-6.png"
+class="internal-embed" data-touched="true" alt="ff-6.png" /><br />
+<img src="attachments/ff-7.png"
+class="internal-embed" data-touched="true" alt="ff-7.png" /></p>
+<br />
+<p><strong>Flag:</strong> <code>VishwaCTF{LbjtQY_449yfcD}</code></p>
+<br />
+<br />
+<br />
+<p><a href="/index.html">home</a><br />
+<br />
+<br />
+</div>
+</body>
+</html>
