@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Privacy Breach - VishwaCTF 2023 Writeup by footpics4sale</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="css/lightfairy-pink2.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+<p><h1 data-heading="VishwaCTF 2023 Writeup"
+id="vishwactf-2023-writeup">VishwaCTF 2023 Writeup</h1>
+<strong>Writeup by:</strong> <a
+href="https://github.com/footpics4sale" class="external-link"
+aria-label-position="top" aria-label="https://github.com/footpics4sale"
+rel="noopener" target="_blank">footpics4sale</a> of <a
+href="https://onlyfeet.tech" class="external-link"
+aria-label-position="top" aria-label="https://onlyfeet.tech"
+rel="noopener" target="_blank">OnlyFeet</a><br />
+<strong>CTF:</strong> <a href="https://vishwactf.com" class="external-link"
+aria-label-position="top" aria-label="https://vishwactf.com"
+rel="noopener" target="_blank">https://vishwactf.com</a>
+</p>
+
+<p><h2 data-heading="Privacy Breach" id="privacy-breach">Privacy
+Breach</h2>
+<strong>Category:</strong> OSINT<br />
+<strong>Difficulty:</strong> Medium</p>
+<p><strong>DESCRIPTION</strong>
+<pre><code>Dude...They just emailed my own password back to me (and it wasn&#39;t even asterisked) Don&#39;t they know that&#39;s a severe breach of privacy!!! Offenders leaked them in PlainText. I hope they lie at the bottom of the deepest pits of hell Can you tell me their domain name??</code></pre></p>
+<p><strong>FLAG FORMAT</strong><br />
+<code>VishwaCTF{}</code></p>
+<br />
+
+<p><h2 data-heading="Writeup" id="writeup">Writeup</h2>
+Googling things like <code>password emailed back in plaintext</code>
+lead to this website which mentioned <a
+href="https://plaintextoffenders.com" class="external-link"
+aria-label-position="top" aria-label="https://plaintextoffenders.com"
+rel="noopener" target="_blank">plaintextoffenders.com</a>:<br />
+<a href="https://news.ycombinator.com/item?id=2414496"
+class="external-link" rel="noopener"
+target="_blank">https://news.ycombinator.com/item?id=2414496</a><br />
+<img src="attachments/pb-1.png"
+class="internal-embed" data-touched="true" alt="pb-1.png" /></p>
+<p>The Plain Text Offenders site has a note to use the list at <a
+href="https://plaintextoffenders.com/offenders" class="external-link"
+rel="noopener"
+target="_blank">https://plaintextoffenders.com/offenders</a>:<br />
+<img src="attachments/pb-2.png"
+class="internal-embed" data-touched="true" alt="pb-2.png" /></p>
+<p><em>🥹 Yes, I did try the flag <code>VishwaCTF{shodan.io}</code> and several domains
+from the recent posts. I was hoping the Offenders List might have
+domains posted after 2021.</em></p>
+<p>The Offenders List page has a link to a GitHub file:<br />
+<a
+href="https://github.com/plaintextoffenders/plaintextoffenders/blob/master/offenders.csv"
+class="external-link" rel="noopener"
+target="_blank">https://github.com/plaintextoffenders/plaintextoffenders/blob/master/offenders.csv</a><br />
+<img src="attachments/pb-3.png"
+class="internal-embed" data-touched="true" alt="pb-3.png" /><br />
+<img src="attachments/pb-4.png"
+class="internal-embed" data-touched="true" alt="pb-4.png" /></p>
+<p>Tried some domains from here and a bunch mentioned in recent years
+through Google searches... nothing worked.</p>
+<p>Read the challenge description again...<br />
+"I hope they lie at the bottom of the deepest pits of hell"</p>
+<p>This <em>has</em> to mean something right?</p>
+<p>😐 It was the domain listed at the bottom of the Offenders List
+file.<br />
+<img src="attachments/pb-5.png"
+class="internal-embed" data-touched="true" alt="pb-5.png" /></p>
+<br />
+<p><strong>Flag:</strong> <code>VishwaCTF{napcosecurity.com}</code></p>
+<br />
+<br />
+</div>
+</body>
+</html>
