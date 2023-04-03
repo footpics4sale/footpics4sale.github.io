@@ -38,16 +38,16 @@ rel="noopener" target="_blank">OnlyFeet</a></p>
 Our CrimeBranch is investigating the following crime. We cannot afford
 to visit the crime scene IRL, please help us.</p>
 <p><strong>FLAG FORMAT:</strong> <code>VishwaCTF{}</code></p>
-<p><strong>FILE:</strong> <a href="/attachments/RealFirst.png" aria-label-position="top"
-aria-label="/attachments/RealFirst.png"
+<p><strong>FILE:</strong> <a href="attachments/RealFirst.png" aria-label-position="top"
+aria-label="attachments/RealFirst.png"
 rel="noopener" target="_blank">RealFirst.png</a></p>
 <h2 data-heading="Writeup" id="writeup">Writeup</h2>
 <p>The provided file gives this error:<br />
-<img src="/attachments/investigator-1.png" class="internal-embed"
+<img src="attachments/investigator-1.png" class="internal-embed"
 data-touched="true" alt="investigator-1.png" /></p>
 <p>Opening the file in a hex editor shows that the first four bytes
 don't match what would normally be used for a PNG file:<br />
-<img src="/attachments/investigator-2.png" class="internal-embed"
+<img src="attachments/investigator-2.png" class="internal-embed"
 data-touched="true" alt="investigator-2.png" /></p>
 <p>The <a href="https://en.wikipedia.org/wiki/List_of_file_signatures"
 class="external-link" aria-label-position="top"
@@ -55,69 +55,69 @@ aria-label="https://en.wikipedia.org/wiki/List_of_file_signatures"
 rel="noopener" target="_blank">file signature</a> (aka magic
 numbers/bytes) for a PNG file should be:
 <code>89 50 4E 47 0D 0A 1A 0A</code><br />
-<img src="/attachments/investigator-3.png" class="internal-embed"
+<img src="attachments/investigator-3.png" class="internal-embed"
 data-touched="true" alt="investigator-3.png" /></p>
 <p>The image can now be viewed:<br />
-<img src="/attachments/RealFirst2.png" class="internal-embed"
+<img src="attachments/RealFirst2.png" class="internal-embed"
 data-touched="true" alt="RealFirst2.png" /></p>
 <p>To get the latitude and longitude, I used <a
 href="https://pixelcalculator.com" class="external-link" rel="noopener"
 target="_blank">https://pixelcalculator.com</a> to convert pixels to
 cm:<br />
-<img src="/attachments/investigator-4.png" class="internal-embed"
+<img src="attachments/investigator-4.png" class="internal-embed"
 data-touched="true" alt="investigator-4.png" /><br />
 Latitude: 52.37<br />
 Longitude: 5.2</p>
 <p>Entered these coordinates in Google Maps and we're placed in a
 parking lot in Almere, Netherlands:<br />
-<img src="/attachments/investigator-5.png" class="internal-embed"
+<img src="attachments/investigator-5.png" class="internal-embed"
 data-touched="true" alt="investigator-5.png" /><br />
 Couldn't find anything about a crime or anything hinting about the CTF
 challenge in the surrounding markers so I tried to find other clues in
-the image <a href="/attachments/RealFirst2.png" aria-label-position="top"
-aria-label="/attachments/RealFirst2.png"
+the image <a href="attachments/RealFirst2.png" aria-label-position="top"
+aria-label="attachments/RealFirst2.png"
 rel="noopener" target="_blank">RealFirst2.png</a>.</p>
 <p>There wasn't anything useful in the metadata but the
 <code>strings</code> command shows this:<br />
-<img src="/attachments/investigator-6.png" class="internal-embed"
+<img src="attachments/investigator-6.png" class="internal-embed"
 data-touched="true" alt="investigator-6.png" /></p>
 <p>Googling the coordinates and "dock murder" provides these
 results:<br />
-<img src="/attachments/investigator-7.png" class="internal-embed"
+<img src="attachments/investigator-7.png" class="internal-embed"
 data-touched="true" alt="investigator-7.png" /></p>
 <p>The first result is an article with coordinates close to 52.37,
 5.2:<br />
-<img src="/attachments/investigator-8.png" class="internal-embed"
+<img src="attachments/investigator-8.png" class="internal-embed"
 data-touched="true" alt="investigator-8.png" /></p>
 <p>The Google Maps link in the article places us next to a marker for
 Beatrixpark Dock. This is where we find a review from
 "vishwa_crimebranch" saying they use the same username on
 Instagram:<br />
-<img src="/attachments/investigator-9.png" class="internal-embed"
+<img src="attachments/investigator-9.png" class="internal-embed"
 data-touched="true" alt="investigator-9.png" /></p>
 <p>The Instagram account has one post:<br />
-<img src="/attachments/investigator-10.png" class="internal-embed"
+<img src="attachments/investigator-10.png" class="internal-embed"
 data-touched="true" alt="investigator-10.png" /></p>
 <p>The Google Drive URL (<a
 href="https://drive.google.com/file/d/1Ze24yj4dCmcEVqQe_dOcxnBS5D-0Sqp4/view?usp=share_link"
 class="external-link" rel="noopener"
 target="_blank">https://drive.google.com/file/d/1Ze24yj4dCmcEVqQe_dOcxnBS5D-0Sqp4/view?usp=share_link</a>)
 is for a video file named "Evidence-Shredded_Page.mp4":<br />
-<img src="/attachments/investigator-11.png" class="internal-embed"
+<img src="attachments/investigator-11.png" class="internal-embed"
 data-touched="true" alt="investigator-11.png" /></p>
 <p>I used <code>exiftool</code> to check the file's metadata and notice
 the following comment:<br />
-<img src="/attachments/investigator-12.png" class="internal-embed"
+<img src="attachments/investigator-12.png" class="internal-embed"
 data-touched="true" alt="investigator-12.png" /></p>
 <p>On <a href="https://ezgif.com" class="external-link" rel="noopener"
 target="_blank">https://ezgif.com</a> there are a bunch of different
 tools that can be used on gifs. I used the "Video to GIF" tool and the
 "Split" tool to view the entire message of the video.<br />
-<img src="/attachments/investigator-ezgif.gif" class="internal-embed"
+<img src="attachments/investigator-ezgif.gif" class="internal-embed"
 data-touched="true" alt="investigator-ezgif.gif" /><br />
-<img src="/attachments/investigator-13.png" class="internal-embed"
+<img src="attachments/investigator-13.png" class="internal-embed"
 data-touched="true" alt="investigator-13.png" /><br />
-<img src="/attachments/investigator-14.png" class="internal-embed"
+<img src="attachments/investigator-14.png" class="internal-embed"
 data-touched="true" alt="investigator-14.png" /><br />
 The following information is provided:</p>
 <ul>
@@ -134,26 +134,26 @@ review site to see what people have said about hte site, and you can see
 my summary acknowledgement uploaded."</li>
 </ul></li>
 </ul>
-<p><img src="/attachments/investigator-15.png" class="internal-embed"
+<p><img src="attachments/investigator-15.png" class="internal-embed"
 data-touched="true" alt="investigator-15.png" /><br />
 There isn't anything besides the photo displayed at "P9W8+2R Wittmann,
 Arizona, USA" on Google Maps. Even though it says there are "9 photos",
 I could only see the one.<br />
-<img src="/attachments/investigator-16.png" class="internal-embed"
+<img src="attachments/investigator-16.png" class="internal-embed"
 data-touched="true" alt="investigator-16.png" /></p>
 <p>Because of the binary hint "giant triangle", I viewed the marker
 named "Perfect Triangle West of White Tank...". The two reviews did not
 have anything related to the challenge.<br />
 I did notice a new marker named "The Giant Triangle" show up after the
 "Perfect Triangle" one was selected:<br />
-<img src="/attachments/investigator-17.png" class="internal-embed"
+<img src="attachments/investigator-17.png" class="internal-embed"
 data-touched="true" alt="investigator-17.png" /></p>
 <p>Again, recent reviews for "The Giant Triangle" did not have anything
 BUT there is something hidden within the images.<br />
 The flag is in an image uploaded by "vishwa_infoMan":<br />
-<img src="/attachments/investigator-18.png" class="internal-embed"
+<img src="attachments/investigator-18.png" class="internal-embed"
 data-touched="true" alt="investigator-18.png" /><br />
-<img src="/attachments/Flag.png" class="internal-embed"
+<img src="attachments/Flag.png" class="internal-embed"
 data-touched="true" alt="Flag.png" /></p>
   <p><strong>Flag:</strong>
 <code>VishwaCTF{n0t_4_murd3r_just_4_m1sund3rst4nd1ng}</code></p>
